@@ -1,0 +1,10 @@
+{
+  "name": "web_port",
+  "default_attributes": {
+    "web_ports": {
+      "nginx_port": "8080",
+      "jenkins_port": "9090",
+      "tomcat_port": "10100"
+    }
+  }
+}
