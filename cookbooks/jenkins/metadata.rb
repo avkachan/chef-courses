@@ -1,0 +1,10 @@
+maintainer 'Andrei_Kachan'
+maintainer_email 'andrei_kachan@epam.com'
+version '1.0.0'
+issues_url 'https://github.com/chef-cookbooks/something/issues'
+source_url 'https://github.com/chef-cookbooks/something'
+name 'jenkins'
+
+depends 'java'
+depends 'nginx'
+depends 'tomcat'

@@ -1,0 +1,23 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: sbeliakou/centos-6.7-x86_64
+
+suites:
+  - name: default
+    cookbook 'jenkins', path: '/home/Student/Desktop/AECM/CM_Chef/exit_task/cookbooks/jenkins'
+    cookbook 'java', path: '/home/Student/Desktop/AECM/CM_Chef/exit_task/cookbooks/java'
+    cookbook 'nginx', path: '/home/Student/Desktop/AECM/CM_Chef/exit_task/cookbooks/nginx'
+    cookbook 'tomcat', path: '/home/Student/Desktop/AECM/CM_Chef/exit_task/cookbooks/tomcat'
+    run_list:
+     - recipe[jenkins::default]  
+    attributes:
+      web_ports:
+        nginx_port: '8080'
+        jenkins_port: '9090'
+        tomcat_port: '10100'
